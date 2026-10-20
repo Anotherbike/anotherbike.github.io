@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+
+<html lang="ru">
+<head>
+
+    <!-- Технические мета-теги -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <!-- Заголовок документа -->
+    <title>Another.bike — First Balance Bike Community in Budapest</title>
+
+    <!-- Основные SEO мета-теги -->
+    <meta name="description" content="First Balance Bike Community in Budapest for Kids from 2 for 4 years old">
+    <meta name="keywords" content="balance bike, pushbike, begovel, community, club, classes, 2 years old, two years old, Budapest, Hungary, беговел клуб, баланс байк, без педалей, Будапешт, Венгрия">
+    <meta name="author" content="Korney Krongauz">
+    <meta name="robots" content="index, follow">
+
+    <!-- Мета-теги Open Graph 
+    <meta property="og:title" content="Another.bike">
+    <meta property="og:description" content="First Balance Bike Community in Budapest, Hungary">
+    <meta property="og:image" content="https://example.com">
+    <meta property="og:url" content="https://example.com">
+    <meta property="og:type" content="website">
+    -->
+
+    <!-- Встроенные CSS стили -->
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #F5F3E8;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: Arial, sans-serif;
+            overflow: hidden; /* Предотвращает появление полос прокрутки при смещении круга */
+        }
+
+        /* Контейнер для логотипа и подложки */
+        .logo-container {
+            position: relative; /* Создает систему координат для абсолютных элементов внутри */
+            display: inline-block;
+        }
+
+        /* Желтый круг на фоне */
+        .bg-circle {
+            position: absolute;
+            width: 150px;
+            height: 150px;
+            background-color: #F4B435;
+            border-radius: 50%;
+            z-index: 1;
+
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            
+            transition: all 0.3s ease;
+        }
+
+        /* Стили для самого логотипа */
+        .logo-container img {
+            position: relative;
+            max-width: 100%;
+            height: auto;
+            display: block;
+            padding: 20px;
+            text-align: center;
+            z-index: 2; /* Помещает логотип поверх желтого круга */
+        }
+
+          .subtitle {
+            position: relative;
+            text-align: center;
+            z-index: 2;
+            color: #303030;
+          }
+
+    </style>
+
+</head>
+<body>
+
+    <!-- Контейнер с элементами -->
+    <div class="logo-container">
+        <!-- Желтый круг под логотипом -->
+        <div class="bg-circle" id="randomCircle"></div>
+        
+        <!-- Логотип компании -->
+        <div class="logo"><img src="logo.svg" alt="Another.bike" /></div>
+        <div class="subtitle">First Balance Bike Community in Budapest</div>
+    </div>
+
+    <!-- Скрипт для случайного позиционирования круга -->
+    <script>
+        window.addEventListener('DOMContentLoaded', () => {
+            const circle = document.getElementById('randomCircle');
+            
+            // Генерируем случайное смещение от -50% до 50%.
+            // Это гарантирует, что геометрический центр круга (0% смещения) 
+            // никогда не выйдет за физические границы самого логотипа.
+            const randomX = Math.floor(Math.random() * 101) - 50; // от -50 до 50
+            const randomY = Math.floor(Math.random() * 101) - 50; // от -50 до 50
+
+            // Применяем новые координаты, сохраняя центрирование с помощью translate
+            circle.style.top = `calc(50% + ${randomY}%)`;
+            circle.style.left = `calc(50% + ${randomX}%)`;
+        });
+    </script>
+
+</body>
+</html>
