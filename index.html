@@ -71,6 +71,7 @@
             max-width: 100%;
             height: auto;
             display: block;
+            overflow: hidden;
             padding: 20px;
             text-align: center;
             z-index: 2; /* Помещает логотип поверх желтого круга */
@@ -88,14 +89,12 @@
 </head>
 <body>
 
-    <!-- Контейнер с элементами -->
     <div class="logo-container">
-        <!-- Желтый круг под логотипом -->
+
         <div class="bg-circle" id="randomCircle"></div>
-        
-        <!-- Логотип компании -->
         <div class="logo"><img src="logo.svg" alt="Another.bike" /></div>
         <div class="subtitle">First Balance Bike Community in Budapest</div>
+
     </div>
 
     <!-- Скрипт для случайного позиционирования круга -->
