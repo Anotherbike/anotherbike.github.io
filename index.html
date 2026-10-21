@@ -33,6 +33,12 @@
             box-sizing: border-box;
         }
 
+        html, body {
+          width: 100%;
+          max-width: 100%;
+          overflow-x: hidden; /* Жестко запрещает горизонтальный скролл на уровне всей страницы */
+          }
+
         body {
             background-color: #F5F3E8;
             min-height: 100vh;
@@ -47,7 +53,7 @@
         /* Контейнер для логотипа и подложки */
         .logo-container {
             position: relative; /* Создает систему координат для абсолютных элементов внутри */
-            display: inline-block;
+            display: block;
         }
 
         /* Желтый круг на фоне */
