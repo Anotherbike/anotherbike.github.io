@@ -15,7 +15,7 @@
     <meta name="description" content="First Balance Bike Community in Budapest for Kids from 2 for 4 years old">
     <meta name="keywords" content="balance bike, pushbike, begovel, community, club, classes, 2 years old, two years old, Budapest, Hungary, беговел клуб, баланс байк, без педалей, Будапешт, Венгрия">
     <meta name="author" content="Korney Krongauz">
-    <meta name="robots" content="index, follow">
+    <meta name="robots" content="noindex, nofollow">
 
     <!-- Мета-теги Open Graph 
     <meta property="og:title" content="Another.bike">
@@ -36,12 +36,13 @@
         html, body {
           width: 100%;
           max-width: 100%;
-          overflow-x: hidden; /* Жестко запрещает горизонтальный скролл на уровне всей страницы */
+          overflow-x: hidden;
+          overflow-y: hidden;
           }
 
         body {
             background-color: #F5F3E8;
-            min-height: 100vh;
+            min-height: 100dvh;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -101,7 +102,7 @@
     <div class="logo-container">
 
         <div class="bg-circle" id="randomCircle"></div>
-        <div class="logo"><img src="logo.svg" alt="Another.bike" /></div>
+        <div class="logo"><img src="logo.svg" alt="First Balance Bike Community in Budapest for Kids" /></div>
         <div class="subtitle">First Balance Bike Community in Budapest</div>
 
     </div>
