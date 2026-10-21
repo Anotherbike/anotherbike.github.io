@@ -87,12 +87,40 @@
             z-index: 2; /* Помещает логотип поверх желтого круга */
         }
 
+          .logo {
+            position: relative;
+            display: inline-block;
+            }
+
           .subtitle {
             position: relative;
             text-align: center;
             z-index: 2;
             color: #303030;
-          }
+            }
+
+          .another_blocks {
+            position: relative;
+            display: block;
+            max-width: 100%;
+            width: 100%;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            z-index: 2;
+            margin-top: 60px;
+            }
+
+            .another_blocks div {
+              display: inline-block;
+              /* text-transform: uppercase; */
+              font-size: 1.2em;
+              font-weight: bold;
+              }
+
+              .another_blocks div:not(:last-child) {
+                padding-right: 30px;
+                }
 
     </style>
 
@@ -101,11 +129,21 @@
 
     <div class="logo-container">
 
-        <div class="bg-circle" id="randomCircle"></div>
-        <div class="logo"><a href="/"><img src="logo.svg" alt="First Balance Bike Community in Budapest for Kids" /></a></div>
+        <div class="logo">
+          <div class="bg-circle" id="randomCircle"></div>
+          <a href="/"><img src="logo.svg" alt="First Balance Bike Community in Budapest for Kids" /></a>
+        </div>
         <div class="subtitle">First Balance Bike Community in Budapest</div>
 
+        <div class="another_blocks">
+          <div>Another goal</div>
+          <div>Another try</div>
+          <div>Another skill</div>
+          <div>Another smile</div>
+        </div>
+        
     </div>
+
 
     <!-- Скрипт для случайного позиционирования круга -->
     <script>
